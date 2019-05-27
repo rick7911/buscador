@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<div class="row boton">
+  <button id="nuevo"  type="submit" class="btn btn-outline-secondary">Inserta nuevo documento</button>
+
+ 
+</div>
+<div  id="insert" class="row agregar">
+    <div class="custom-file col-8">
+      <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+      <label class="custom-file-label" for="customFileLang" data-browse="Seleccionar ">Seleccionar Nuevo Documento</label>
+    </div>
+  </div>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Pagina</th>
+      <th scope="col">Show</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pagina of lista">
+      <th scope="row"> {{ pagina.nameDoc }}</th>
+      <td><button type="button" class="btn btn-info"><i class="far fa-file-alt"></i></button></td>
+      <td><button type="button" class="btn btn-success"><i class="far fa-edit"></i></button></td>
+      <td><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></td>
+    </tr>
+    
+  </tbody>
+</table>
+<!-- <script>
+  function mostrar(){
+    var contenedor = document.getElementById("insert");		
+      contenedor.style.display = "block";		
+      return true;	
+  }
+   
+
+
+</script> -->
+
